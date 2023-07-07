@@ -1,0 +1,47 @@
+
+body
+{
+	background: #000000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+ul
+{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+ul li
+{
+	list-style: none;
+}
+ul li a
+{
+	position: relative;
+	display: inline-block;
+	margin: 10px 0;
+	font-size: 2em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+}
+ul .cursor
+{
+	position: fixed;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #fff;
+	mix-blend-mode: difference;
+	transform: translate(-50%,-50%);
+	pointer-events: none;
+}
+ul li:hover ~ .cursor 
+{
+	background: #000;
+	transform: translate(-50%,-50%) scale(4);
+	box-shadow: 0 0 0 100vh #fff;
+}
